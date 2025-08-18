@@ -16,6 +16,7 @@
       display: inline-block;
       margin-top: 20px;
       transition: 0.2s ease;
+      cursor: pointer;
     }
     .exit-btn:hover {
       background: darkred;
@@ -34,13 +35,17 @@
         กลับเถอะ ๆๆ <br>
         ไม่เหลืออะไรให้อ่านแล้วจริง ๆ 😂
       </p>
-      <div class="actions">
-        <a class="btn" href="index.html">⬅ กลับหน้าแรก</a>
-      </div>
       <div>
-        <a href="about:blank" class="exit-btn">🚪 ออกจากเว็บ</a>
+        <button class="exit-btn" onclick="exitSite()">🚪 ออกจากเว็บ</button>
       </div>
     </section>
   </main>
+
+  <script>
+    function exitSite() {
+      // ถ้า browser ไม่ยอมปิดแท็บ -> เปลี่ยนเป็น about:blank
+      window.open('', '_self').close();
+    }
+  </script>
 </body>
 </html>
