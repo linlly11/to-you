@@ -14,7 +14,62 @@ body{
   color: var(--white);
   display:flex; align-items:center; justify-content:center;
 }
+body {
+  font-family: "Prompt", sans-serif;
+  background: #fff0f5;
+  color: #333;
+  text-align: center;
+  padding: 20px;
+}
 
+h1 {
+  color: #ff69b4;
+  margin-bottom: 20px;
+}
+
+.folder-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 15px;
+}
+
+.folder {
+  background: #ffb6c1;
+  color: white;
+  border-radius: 15px;
+  padding: 15px;
+  width: 250px;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.2);
+}
+
+.folder h2 {
+  margin: 0 0 10px;
+}
+
+button {
+  background: #ff69b4;
+  color: white;
+  border: none;
+  padding: 8px 15px;
+  border-radius: 10px;
+  cursor: pointer;
+  margin-top: 10px;
+}
+
+button:hover {
+  background: #ff1493;
+}
+
+.hidden {
+  display: none;
+}
+
+.more {
+  margin-top: 10px;
+  text-align: left;
+  font-size: 14px;
+}
 .card{
   width: 500px;
   background: #1a1a22;
