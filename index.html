@@ -5,90 +5,98 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>โฟลเดอร์ของฉัน</title>
   <link rel="stylesheet" href="style.css">
+  <style>
+    body {
+      font-family: "Prompt", sans-serif;
+      background: #fff0f5;
+      color: #333;
+      text-align: center;
+      padding: 20px;
+    }
+
+    h1 {
+      color: #ff69b4;
+      margin-bottom: 20px;
+    }
+
+    .folder {
+      background: #ffb6c1;
+      color: white;
+      border-radius: 15px;
+      padding: 20px;
+      max-width: 400px;
+      margin: auto;
+      box-shadow: 0 4px 6px rgba(0,0,0,0.2);
+    }
+
+    button {
+      background: #ff69b4;
+      color: white;
+      border: none;
+      padding: 8px 15px;
+      border-radius: 10px;
+      cursor: pointer;
+      margin-top: 15px;
+    }
+
+    button:hover {
+      background: #ff1493;
+    }
+
+    .hidden {
+      display: none;
+    }
+  </style>
 </head>
 <body>
   <h1>📂 โฟลเดอร์ของฉัน</h1>
-  <div class="folder-container">
-    
-    <!-- โฟลเดอร์ 1 -->
-    <div class="folder">
-      <h2>โฟลเดอร์ 1</h2>
-      <div class="content">
-        <p>โฟลเดอร์นี้มีเรื่องเล่า...</p>
-        <button onclick="toggleContent(this)">อ่านต่อ</button>
-        <div class="more hidden">
-          <p>นี่คือเรื่องราวที่อยู่ในโฟลเดอร์แรก...</p>
-        </div>
-      </div>
-    </div>
 
-    <!-- โฟลเดอร์ 2 -->
-    <div class="folder">
-      <h2>โฟลเดอร์ 2</h2>
-      <div class="content">
-        <p>โฟลเดอร์นี้ก็มีเรื่องเล่า...</p>
-        <button onclick="toggleContent(this)">อ่านต่อ</button>
-        <div class="more hidden">
-          <p>เนื้อหาเพิ่มเติมในโฟลเดอร์ที่สอง...</p>
-        </div>
-      </div>
-    </div>
+  <!-- โฟลเดอร์ทั้งหมด -->
+  <div class="folder" id="folder1">
+    <h2>โฟลเดอร์ 1</h2>
+    <p>โฟลเดอร์นี้มีเรื่องเล่า...</p>
+    <button onclick="nextFolder(1)">อ่านต่อ</button>
+  </div>
 
-    <!-- โฟลเดอร์ 3 -->
-    <div class="folder">
-      <h2>โฟลเดอร์ 3</h2>
-      <div class="content">
-        <p>โฟลเดอร์สุดท้าย (เก่า)...</p>
-        <button onclick="toggleContent(this)">อ่านต่อ</button>
-        <div class="more hidden">
-          <p>ไม่มีอะไรแล้วลืม 😓</p>
-        </div>
-      </div>
-    </div>
+  <div class="folder hidden" id="folder2">
+    <h2>โฟลเดอร์ 2</h2>
+    <p>โฟลเดอร์นี้ก็มีเรื่องเล่า...</p>
+    <button onclick="nextFolder(2)">อ่านต่อ</button>
+  </div>
 
-    <!-- ✅ โฟลเดอร์ 4 -->
-    <div class="folder">
-      <h2>โฟลเดอร์ 4</h2>
-      <div class="content">
-        <p>ยังอีกยังไม่ออก...</p>
-        <button onclick="toggleContent(this)">อ่านต่อ</button>
-        <div class="more hidden">
-          <p>เอาตรง ๆ คือไม่รู้จะทำอะไร นั่งเขียนโค้ดถึงตี 2 แต่มันไม่ได้เลย ยาวไปถึงตี 3 แล้วคือมีเรื่องจะเล่าเหมือนเจอผีเลย อยากรู้อ่านต่อนะ...</p>
-        </div>
-      </div>
-    </div>
+  <div class="folder hidden" id="folder3">
+    <h2>โฟลเดอร์ 3</h2>
+    <p>โฟลเดอร์สุดท้าย (เก่า)...</p>
+    <button onclick="nextFolder(3)">อ่านต่อ</button>
+  </div>
 
-    <!-- ✅ โฟลเดอร์ 5 -->
-    <div class="folder">
-      <h2>โฟลเดอร์ 5</h2>
-      <div class="content">
-        <p>เรื่องมันเป็นงี้...</p>
-        <button onclick="toggleContent(this)">อ่านต่อ</button>
-        <div class="more hidden">
-          <p>ตอนกำลังนั่งเขียนโค้ดอยู่อะ เอ้า! อันนี้เต็มอีกแล้ว กดอ่านต่อนะ...</p>
-        </div>
-      </div>
-    </div>
+  <div class="folder hidden" id="folder4">
+    <h2>โฟลเดอร์ 4</h2>
+    <p>ยังอีกยังไม่ออก...</p>
+    <button onclick="nextFolder(4)">อ่านต่อ</button>
+  </div>
 
-    <!-- ✅ โฟลเดอร์ 6 -->
-    <div class="folder">
-      <h2>โฟลเดอร์ 6</h2>
-      <div class="content">
-        <p>โฟลเดอร์สุดท้ายจริง ๆ...</p>
-        <button onclick="toggleContent(this)">อ่านต่อ</button>
-        <div class="more hidden">
-          <p>ไม่มีอะไรแล้วลืม เต็มบ่อยเกิน 😓</p>
-        </div>
-      </div>
-    </div>
+  <div class="folder hidden" id="folder5">
+    <h2>โฟลเดอร์ 5</h2>
+    <p>เรื่องมันเป็นงี้...</p>
+    <button onclick="nextFolder(5)">อ่านต่อ</button>
+  </div>
 
+  <div class="folder hidden" id="folder6">
+    <h2>โฟลเดอร์ 6</h2>
+    <p>โฟลเดอร์สุดท้ายจริง ๆ...</p>
+    <button onclick="restart()">เริ่มใหม่</button>
   </div>
 
   <script>
-    function toggleContent(button) {
-      const more = button.nextElementSibling;
-      more.classList.toggle("hidden");
-      button.textContent = more.classList.contains("hidden") ? "อ่านต่อ" : "ซ่อน";
+    function nextFolder(num) {
+      document.getElementById("folder" + num).classList.add("hidden");
+      document.getElementById("folder" + (num + 1)).classList.remove("hidden");
+    }
+
+    function restart() {
+      document.querySelectorAll(".folder").forEach(f => f.classList.add("hidden"));
+      document.getElementById("folder1").classList.remove("hidden");
     }
   </script>
 </body>
