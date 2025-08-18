@@ -1,103 +1,28 @@
+
 <!DOCTYPE html>
 <html lang="th">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>โฟลเดอร์ของฉัน</title>
-  <link rel="stylesheet" href="style.css">
-  <style>
-    body {
-      font-family: "Prompt", sans-serif;
-      background: #fff0f5;
-      color: #333;
-      text-align: center;
-      padding: 20px;
-    }
-
-    h1 {
-      color: #ff69b4;
-      margin-bottom: 20px;
-    }
-
-    .folder {
-      background: #ffb6c1;
-      color: white;
-      border-radius: 15px;
-      padding: 20px;
-      max-width: 400px;
-      margin: auto;
-      box-shadow: 0 4px 6px rgba(0,0,0,0.2);
-    }
-
-    button {
-      background: #ff69b4;
-      color: white;
-      border: none;
-      padding: 8px 15px;
-      border-radius: 10px;
-      cursor: pointer;
-      margin-top: 15px;
-    }
-
-    button:hover {
-      background: #ff1493;
-    }
-
-    .hidden {
-      display: none;
-    }
-  </style>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>เว็บอะไรไม่รู้</title>
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-  <h1>📂 โฟลเดอร์ของฉัน</h1>
+  <main class="card">
+    <header class="header">
+      <h1>เว็บอะไรไม่รู้</h1>
+    </header>
 
-  <!-- โฟลเดอร์ทั้งหมด -->
-  <div class="folder" id="folder1">
-    <h2>โฟลเดอร์ 1</h2>
-    <p>โฟลเดอร์นี้มีเรื่องเล่า...</p>
-    <button onclick="nextFolder(1)">อ่านต่อ</button>
-  </div>
+    <section class="section">
+      <p class="lead">เขียนมาทำไมไม่รู้อยากรู้ให้อ่านเพิ่ม</p>
+      <div class="actions">
+        <a class="btn" href="details.html">อ่านเพิ่ม</a>
+      </div>
+    </section>
 
-  <div class="folder hidden" id="folder2">
-    <h2>โฟลเดอร์ 2</h2>
-    <p>โฟลเดอร์นี้ก็มีเรื่องเล่า...</p>
-    <button onclick="nextFolder(2)">อ่านต่อ</button>
-  </div>
-
-  <div class="folder hidden" id="folder3">
-    <h2>โฟลเดอร์ 3</h2>
-    <p>โฟลเดอร์สุดท้าย (เก่า)...</p>
-    <button onclick="nextFolder(3)">อ่านต่อ</button>
-  </div>
-
-  <div class="folder hidden" id="folder4">
-    <h2>โฟลเดอร์ 4</h2>
-    <p>ยังอีกยังไม่ออก...</p>
-    <button onclick="nextFolder(4)">อ่านต่อ</button>
-  </div>
-
-  <div class="folder hidden" id="folder5">
-    <h2>โฟลเดอร์ 5</h2>
-    <p>เรื่องมันเป็นงี้...</p>
-    <button onclick="nextFolder(5)">อ่านต่อ</button>
-  </div>
-
-  <div class="folder hidden" id="folder6">
-    <h2>โฟลเดอร์ 6</h2>
-    <p>โฟลเดอร์สุดท้ายจริง ๆ...</p>
-    <button onclick="restart()">เริ่มใหม่</button>
-  </div>
-
-  <script>
-    function nextFolder(num) {
-      document.getElementById("folder" + num).classList.add("hidden");
-      document.getElementById("folder" + (num + 1)).classList.remove("hidden");
-    }
-
-    function restart() {
-      document.querySelectorAll(".folder").forEach(f => f.classList.add("hidden"));
-      document.getElementById("folder1").classList.remove("hidden");
-    }
-  </script>
+    <footer>
+      เครดิต: <strong>ppp</strong>
+    </footer>
+  </main>
 </body>
 </html>
