@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>เว็บอะไรไม่รู้</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <main class="card">
+    <header class="header">
+      <h1>เว็บอะไรไม่รู้</h1>
+    </header>
+
+    <section class="section">
+      <p class="lead">เขียนมาทำไมไม่รู้อยากรู้ให้อ่านเพิ่ม</p>
+      <div class="actions">
+        <a class="btn" href="details.html">อ่านเพิ่ม</a>
+      </div>
+    </section>
+
+    <footer>
+      เครดิต: <strong>ppp</strong>
+    </footer>
+  </main>
+</body>
+</html>
