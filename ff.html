@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>จบจริงแล้ว!</title>
+  <link rel="stylesheet" href="style.css" />
+  <style>
+    .exit-btn {
+      background: crimson;
+      color: white;
+      padding: 12px 20px;
+      border-radius: 12px;
+      font-weight: 700;
+      text-decoration: none;
+      display: inline-block;
+      margin-top: 20px;
+      transition: 0.2s ease;
+      cursor: pointer;
+    }
+    .exit-btn:hover {
+      background: darkred;
+    }
+  </style>
+</head>
+<body>
+  <main class="card">
+    <header class="header">
+      <h1>ก็ทนอ่านมาจนถึงตรงนี้เนาะ 😅</h1>
+    </header>
+
+    <section class="section">
+      <p class="lead">
+        เอาล่ะพอแล้วววว<br>
+        กลับเถอะ ๆๆ <br>
+        ไม่เหลืออะไรให้อ่านแล้วจริง ๆ 😂
+      </p>
+      <div>
+        <button class="exit-btn" onclick="exitSite()">🚪 ออกจากเว็บ</button>
+      </div>
+    </section>
+  </main>
+
+  <script>
+    function exitSite() {
+      // พยายามปิดแท็บ ถ้า browser ไม่อนุญาต -> เปิดหน้าเปล่าแทน
+      window.open('', '_self').close();
+    }
+  </script>
+</body>
+</html>
